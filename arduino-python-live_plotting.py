@@ -13,9 +13,9 @@ ax = fig.add_subplot(1,1,1)
 ax.set_xlim([0,20])
 ax.set_ylim([0,6])
 ax.plot([i for i in range(10)],[i for i in range(10)])
-global z,arduino,j
-j=0
+global z,arduino
 z=0
+data_string=""
 xs=[i for i in range(10)]
 ys=[]
 data=0
@@ -23,7 +23,9 @@ data=0
 def animate(i):
     print(z)
     if(z==1):
-        data=int(arduino.readline())
+        data_string=arduino.readline()
+        print(data_string)
+        data=int(arduino.readline()) ## remove int() if you want string data to be represented
         ys.append(data)
         print(ys)
         ax.clear()
