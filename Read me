@@ -1,0 +1,3 @@
+To properly use this code follow instructions
+1) identify your microcontroller/arduino port number and edit it in the code.
+2) your microcontroller/arduino should be preloaded with some code having some serial print instructions.
